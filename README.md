@@ -40,7 +40,7 @@
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.8271|±  |0.0104|
 |     |       |strict-match    |     5|exact_match|↑  |0.7968|±  |0.0111|
 
-## Gemma3-27B-IT-QAT
+## Gemma3-27B-IT-QAT (Q4_0)
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
