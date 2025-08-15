@@ -1,3 +1,7 @@
+# 本儲存庫用於紀錄 LLM 的跑分紀錄
+
+> 使用 [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness/tree/3bc7cc8a72c66bac8d5b830cb3ccec9a5f691b12) 進行模型評估
+
 ## GPT-OSS-20B (RTX4090, RTX5090 也有嘗試過，但忘了紀錄)
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
