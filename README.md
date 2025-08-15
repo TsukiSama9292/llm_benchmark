@@ -6,23 +6,37 @@
 - 系統版本有些許差異，但影響並不大
 - 對此測試與環境有疑慮可以在 [DC 社群 - Twinkile AI](https://discord.gg/dXEn965KZy) @TsukiSama9292 我本人詢問
 
+
 ---
 
-## Gemma3-1B-IT-BF16 (RTX5090)
+# GPT-OSS
+
+## GPT-OSS-20B (FP16) 
+
+|Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
+|-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
+|gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.3510|±  |0.0131|
+|     |       |strict-match    |     5|exact_match|↑  |0.1274|±  |0.0092|
+
+---
+
+# Gemma3
+
+## Gemma3-1B-IT-FP16 (RTX5090)
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.2980|±  |0.0126|
 |     |       |strict-match    |     5|exact_match|↑  |0.2024|±  |0.0111|
 
-## Gemma3-4B-IT-BF16 (RTX4090)
+## Gemma3-4B-IT-FP16 (RTX4090)
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.6126|±  |0.0134|
 |     |       |strict-match    |     5|exact_match|↑  |0.4602|±  |0.0137|
 
-## Gemma3-12B-IT-BF16 (RTX5090)
+## Gemma3-12B-IT-FP16 (RTX5090)
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
@@ -35,6 +49,10 @@
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.8590|±  |0.0096|
 |     |       |strict-match    |     5|exact_match|↑  |0.8514|±  |0.0098|
+
+---
+
+# Gemma3n
 
 ## Gemma3n:E2B-IT-FP16 (RTX5090)
 
@@ -49,6 +67,10 @@
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.7726|±  |0.0115|
 |     |       |strict-match    |     5|exact_match|↑  |0.6763|±  |0.0129|
+
+---
+
+# Llama3
 
 ## [yentinglin/Llama-3-Taiwan-8B-Instruct (BF16)](https://huggingface.co/yentinglin/Llama-3-Taiwan-8B-Instruct) (RTX4090)
 
