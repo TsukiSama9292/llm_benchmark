@@ -6,12 +6,11 @@
 - 系統版本有些許差異，但影響並不大
 - 對此測試與環境有疑慮可以在 [DC 社群 - Twinkile AI](https://discord.gg/dXEn965KZy) @TsukiSama9292 我本人詢問
 
-
 ---
 
 # GPT-OSS
 
-## GPT-OSS-20B (FP16) 
+## GPT-OSS-20B (MXFP4) 
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
@@ -22,28 +21,26 @@
 
 # Gemma3
 
-## Gemma3-1B-IT-FP16 (RTX5090)
-
+## Gemma3-1B-IT-FP16
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.2980|±  |0.0126|
 |     |       |strict-match    |     5|exact_match|↑  |0.2024|±  |0.0111|
 
-## Gemma3-4B-IT-FP16 (RTX4090)
+## Gemma3-4B-IT-FP16
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.6126|±  |0.0134|
 |     |       |strict-match    |     5|exact_match|↑  |0.4602|±  |0.0137|
 
-## Gemma3-12B-IT-FP16 (RTX5090)
-
+## Gemma3-12B-IT-FP16
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.8271|±  |0.0104|
 |     |       |strict-match    |     5|exact_match|↑  |0.7968|±  |0.0111|
 
-## Gemma3-27B-IT-QAT (RTX4090)
+## Gemma3-27B-IT-QAT
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
@@ -54,14 +51,14 @@
 
 # Gemma3n
 
-## Gemma3n:E2B-IT-FP16 (RTX5090)
+## Gemma3n:E2B-IT-FP16
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.6907|±  |0.0127|
 |     |       |strict-match    |     5|exact_match|↑  |0.6020|±  |0.0135|
 
-## Gemma3n:E4B-IT-FP16 (RTX4090)
+## Gemma3n:E4B-IT-FP16
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
@@ -72,7 +69,7 @@
 
 # Llama3
 
-## [yentinglin/Llama-3-Taiwan-8B-Instruct (BF16)](https://huggingface.co/yentinglin/Llama-3-Taiwan-8B-Instruct) (RTX4090)
+## [yentinglin/Llama-3-Taiwan-8B-Instruct (BF16)](https://huggingface.co/yentinglin/Llama-3-Taiwan-8B-Instruct)
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
