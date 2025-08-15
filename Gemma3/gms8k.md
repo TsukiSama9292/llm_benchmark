@@ -1,9 +1,3 @@
-# 本儲存庫用於紀錄 LLM 的跑分紀錄
-
-> 使用 [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness/tree/3bc7cc8a72c66bac8d5b830cb3ccec9a5f691b12) 進行模型評估
-
----
-
 ## Gemma3-1B-IT-BF16 (RTX5090)
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
@@ -31,17 +25,3 @@
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.8590|±  |0.0096|
 |     |       |strict-match    |     5|exact_match|↑  |0.8514|±  |0.0098|
-
-## Gemma3n:E4B-IT-FP16 (RTX4090)
-
-|Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
-|-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
-|gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.7726|±  |0.0115|
-|     |       |strict-match    |     5|exact_match|↑  |0.6763|±  |0.0129|
-
-## [yentinglin/Llama-3-Taiwan-8B-Instruct (BF16)](https://huggingface.co/yentinglin/Llama-3-Taiwan-8B-Instruct) (RTX4090)
-
-|Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
-|-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
-|gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.7195|±  |0.0124|
-|     |       |strict-match    |     5|exact_match|↑  |0.7187|±  |0.0124|
