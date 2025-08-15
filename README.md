@@ -2,6 +2,10 @@
 
 > 使用 [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness/tree/3bc7cc8a72c66bac8d5b830cb3ccec9a5f691b12) 進行模型評估
 
+- 模型運行環境都在 Linux 上 ( Ubuntu 22.04 LTS )
+- 系統版本有些許差異，但影響並不大
+- 對此測試與環境有疑慮可以在 [DC 社群 - Twinkile AI](https://discord.gg/dXEn965KZy) @TsukiSama9292 我本人詢問
+
 ---
 
 ## Gemma3-1B-IT-BF16 (RTX5090)
@@ -31,6 +35,13 @@
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.8590|±  |0.0096|
 |     |       |strict-match    |     5|exact_match|↑  |0.8514|±  |0.0098|
+
+## Gemma3n:E2B-IT-FP16 (RTX5090)
+
+|Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
+|-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
+|gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.6907|±  |0.0127|
+|     |       |strict-match    |     5|exact_match|↑  |0.6020|±  |0.0135|
 
 ## Gemma3n:E4B-IT-FP16 (RTX4090)
 
