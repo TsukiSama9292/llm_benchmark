@@ -295,6 +295,11 @@ body {
   border-color: rgba(239, 68, 68, 0.3);
 }
 
+/* 搜尋輸入框容器 */
+.search-container {
+  position: relative;
+}
+
 /* 搜尋圖標位置調整 */
 .search-icon {
   position: absolute;

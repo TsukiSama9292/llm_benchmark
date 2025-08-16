@@ -113,7 +113,7 @@ export default function ArenaLeaderboard() {
             </select>
           </div>
 
-          <div className="relative">
+          <div className="search-container">
             <Search className="search-icon" />
             <input
               type="text"
