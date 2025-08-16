@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/model_score' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/model_score/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/llm_benchmark' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/llm_benchmark/' : '',
 }
 
 module.exports = nextConfig
