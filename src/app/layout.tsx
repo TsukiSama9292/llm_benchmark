@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'LLM Benchmark Dashboard',
-  description: 'LLM 模型評分記錄 - GSM8K & TMMLUPLUS 基準測試結果',
+  description: 'LLM Benchmark - GSM8K & TMMLU+',
 }
 
 export default function RootLayout({
