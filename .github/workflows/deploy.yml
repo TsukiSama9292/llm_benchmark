@@ -2,7 +2,17 @@ name: Build and Deploy Next.js to gh-pages
 
 on:
   push:
-    branches: [ "main" ]  # 當main分支有推送時觸發
+    branches: [main]
+    paths:
+      - "**/*.ts"
+      - "next-env.d.ts"
+      - "next.config.js"
+      - "package-lock.json"
+      - "package.json"
+      - "tailwind.config.js"
+      - "tsconfig.json"
+      - "tsconfig.tsbuildinfo"
+      - ".github/workflows/deploy.yml"
   workflow_dispatch:      # 允許手動觸發
 
 jobs:

@@ -6,7 +6,10 @@ import { RankCell } from '@/components/ui/RankCell';
 import { ModelInfo } from '@/components/ui/ModelInfo';
 import { ScoreCell } from '@/components/ui/ScoreCell';
 import { CategoryBadge } from '@/components/ui/CategoryBadge';
-import { formatScore } from '@/lib/data';
+import { EnvironmentInfo } from '@/components/ui/EnvironmentInfo';
+import { BenchmarkInfo } from '@/components/ui/BenchmarkInfo';
+import { LicenseCard } from '@/components/ui/LicenseCard';
+import { formatScore, systemInfo } from '@/lib/data';
 
 export default function ArenaLeaderboard() {
   const {
@@ -79,7 +82,7 @@ export default function ArenaLeaderboard() {
             >
               {benchmarkOptions.map(option => (
                 <option key={option.value} value={option.value}>
-                  {option.emoji} {option.label}
+                  {option.label}
                 </option>
               ))}
             </select>
@@ -206,28 +209,11 @@ export default function ArenaLeaderboard() {
         )}
       </div>
 
-      {/* Footer Info */}
-      <div className="mt-8 p-4 bg-slate-800 rounded-lg border border-slate-600">
-        <div className="grid md:grid-cols-2 gap-4 text-sm text-slate-300">
-          <div>
-            <h4 className="font-semibold text-slate-200 mb-2">Test Environment</h4>
-            <ul className="space-y-1">
-              <li>• OS: Linux (Ubuntu 22.04)</li>
-              <li>• Primary GPU: RTX4090 24GB</li>
-              <li>• Secondary GPU: RTX5090 32GB (marked)</li>
-              <li>• Framework: EleutherAI/lm-evaluation-harness</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold text-slate-200 mb-2">Benchmarks</h4>
-            <ul className="space-y-1">
-              <li>• <strong>GSM8K:</strong> Mathematical reasoning problems</li>
-              <li>• <strong>TMMLU+:</strong> Taiwan Traditional Chinese understanding</li>
-              <li>• <strong>Flexible:</strong> Lenient answer extraction</li>
-              <li>• <strong>Strict:</strong> Exact answer matching</li>
-            </ul>
-          </div>
-        </div>
+      {/* Footer Info Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <EnvironmentInfo environment={systemInfo.environment} />
+        <BenchmarkInfo benchmarks={systemInfo.benchmarks} />
+        <LicenseCard license={systemInfo.license} />
       </div>
     </div>
   );

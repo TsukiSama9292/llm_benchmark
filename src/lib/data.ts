@@ -41,12 +41,13 @@ export const modelData: ModelResult[] = [
     hardware: "RTX4090",
     framework: "huggingface",
     scores: [
-      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2768, stderr: 0.0031 },
-      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc_norm", value: 0.2768, stderr: 0.0031 },
-      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2617, stderr: 0.0074 },
-      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2621, stderr: 0.0105 },
-      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2792, stderr: 0.0047 },
-      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2865, stderr: 0.0058 },
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.3153904473085671, stderr: 0.012799353675801836 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.2357846853677028, stderr: 0.0116925156506668 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.27232142857142855, stderr: 0.003129046095819468 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2702857142857143, stderr: 0.00749314569360198 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.25921724333522406, stderr: 0.010445922718571544 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.26893388522206063, stderr: 0.004680603921898167 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2824773413897281, stderr: 0.005818403123869934 }
     ]
   },
   {
@@ -188,22 +189,6 @@ export const modelData: ModelResult[] = [
       { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.4047, stderr: 0.0063 },
     ]
   },
-    {
-    name: "Gemma3-1B-IT-BF16 (huggingface)",
-    description: "HuggingFace 模型官方儲存庫",
-    category: "gemma3",
-    hardware: "RTX4090",
-    framework: "huggingface",
-    scores: [
-      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.3153904473085671, stderr: 0.012799353675801836 },
-      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.2357846853677028, stderr: 0.0116925156506668 },
-      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.27232142857142855, stderr: 0.003129046095819468 },
-      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2702857142857143, stderr: 0.00749314569360198 },
-      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.25921724333522406, stderr: 0.010445922718571544 },
-      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.26893388522206063, stderr: 0.004680603921898167 },
-      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2824773413897281, stderr: 0.005818403123869934 }
-    ]
-  }
 ];
 
 // 工具函數
@@ -296,6 +281,26 @@ export const getTMMLUPlusScores = () => {
       social: socialScore?.value || 0,
     };
   }).filter(Boolean);
+};
+
+// System information data
+export const systemInfo = {
+  environment: {
+    os: "Ubuntu 22.04",
+    framework: "lm-evaluation-harness",
+    primaryGpu: "RTX4090 24GB",
+    secondaryGpu: "RTX5090 32GB"
+  },
+  benchmarks: {
+    gsm8k: "Expert-written math benchmark covering multi-step elementary-level word problems (English), ~8,500 questions (7.5K train, 1K test).",
+    tmmluplus: "Traditional Chinese multiple-choice cognitive benchmark, 66 domains (elementary to professional), ~22,690 questions, 6x larger and more balanced than original TMMLU.",
+  },
+  license: {
+    type: "MIT",
+    copyright: "Copyright",
+    year: "2025",
+    holder: "Xuan-You Lin"
+  }
 };
 
 // 根據框架過濾模型數據
