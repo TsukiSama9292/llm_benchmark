@@ -49,15 +49,8 @@ export const useLeaderboard = () => {
       const tmmluplusOther = tmmluplusOtherScore?.value ?? null;
       const tmmluplus_social_sciences = tmmluplus_social_sciencesScore?.value ?? null;
 
-      // 判斷測試框架
-      let modelFramework: string = 'unknown';
-      if (model.description.toLowerCase().includes('huggingface') || model.description.toLowerCase().includes('hf')) {
-        modelFramework = 'huggingface';
-      } else if (model.description.toLowerCase().includes('ollama')) {
-        modelFramework = 'ollama';
-      } else if (model.description.toLowerCase().includes('llama.cpp')) {
-        modelFramework = 'llama.cpp';
-      }
+      // 使用模型數據中的框架字段，如果沒有則設為 unknown
+      const modelFramework = model.framework || 'unknown';
 
       let currentScore: number | null = null;
       switch (benchmark) {

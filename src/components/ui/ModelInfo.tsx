@@ -31,7 +31,6 @@ export const ModelInfo = memo<ModelInfoProps>(({ name, description, category, ha
         <div className="model-name">{name}</div>
         <div className="model-description">
           {description}
-          {hardware && `, ${hardware}`}
         </div>
       </div>
     </div>
