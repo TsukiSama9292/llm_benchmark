@@ -173,8 +173,7 @@ ${scoresString}
  */
 function main() {
   const hfFilePaths = [
-    '/home/user/workspace/llm_benchmark/eval_data/hf/google__gemma-3n-E4B-it/results_2025-08-16T13-19-48.023288.json',
-    '/home/user/workspace/llm_benchmark/eval_data/hf/yentinglin__Llama-3-Taiwan-8B-Instruct/results_2025-08-16T15-50-14.619924.json'
+    '/home/user/workspace/llm_benchmark/eval_data/hf/google__gemma-3-1b-it/results_2025-08-16T16-34-53.784969.json',
   ];
   
   const dataFilePath = '/home/user/workspace/llm_benchmark/src/lib/data.ts';
