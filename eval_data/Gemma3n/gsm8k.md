@@ -1,5 +1,3 @@
-# Gemma3
-
 ## Gemma3n:E2B-IT-FP16 (Ollama 官方, RTX5090)
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
@@ -13,6 +11,13 @@
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.7726|±  |0.0115|
 |     |       |strict-match    |     5|exact_match|↑  |0.6763|±  |0.0129|
+
+## Gemma3n:E4B-IT-BF16 (Huggiceface)
+
+|Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
+|-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
+|gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.7111|±  |0.0124|
+|     |       |strict-match    |     5|exact_match|↑  |0.6391|±  |0.0132|
 
 ## Ollama 官方 Modelfile
 

@@ -1,5 +1,3 @@
-# Gemma3
-
 ## Gemma3-1B-IT-FP16 (Ollama 官方)
 
 |Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
