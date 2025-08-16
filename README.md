@@ -3,34 +3,10 @@
 > 使用 [EleutherAI/lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness/tree/3bc7cc8a72c66bac8d5b830cb3ccec9a5f691b12) 進行模型評估
 
 - 模型運行環境都在 Linux( Ubuntu 22.04 ), 多數為 RTX4090 24GB 測試, 有幾個是 RTX5090 測試（特別標注）
-- Linux 系統套件版本有些許差異，但其實對於實驗影響並不大
+- Linux 系統套件版本有些許差異，但對於評估分數影響並不大
 - 對此測試與環境有疑慮可以在 [DC 社群 - Twinkile AI](https://discord.gg/dXEn965KZy) @tsukisama9292 我本人詢問情況
-
----
-
-# GPT-OSS
-
-> 測驗時，我把 token 上限調整到 85000，避免過早截斷，導致還沒有輸出答案的情況
-
-## 系統提示詞
-這是 Ollama 基於 ChatGPT 提示詞的設定，因為沒有工具，所以我就把 GO 語言全部過濾掉。
-```
-"You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: {{ currentDate }}\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message."
-```
-
-## GPT-OSS-20B (llama.cpp, MXFP4, ThinkLevel: medium) - 運行約 1 小時半
-
-|Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
-|-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
-|gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.4344|±  |0.0137|
-|     |       |strict-match    |     5|exact_match|↑  |0.3397|±  |0.0130|
-
-## GPT-OSS-20B (Ollama, MXFP4, ThinkLevel: medium) - 運行約 1 小時
-
-|Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
-|-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
-|gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.3950|±  |0.0135|
-|     |       |strict-match    |     5|exact_match|↑  |0.1759|±  |0.0105|
+- 需要算力測測看模型，可以 DC 找我，目前我能用 RTX4090 24GB，能借用 RTX5090 32GB
+- **DC 找我，不需要在那邊嘴臭任何東西，直接講客觀事實(可以文字說明or給我連結/圖片)，動點腦子再講話，辦不到我一律就當傻子，懶得理**
 
 ---
 
@@ -110,3 +86,23 @@
 |-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
 |gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.7726|±  |0.0115|
 |     |       |strict-match    |     5|exact_match|↑  |0.6763|±  |0.0129|
+
+---
+
+# GPT-OSS
+
+> 測驗時，我把 token 上限調整到 85000，避免過早截斷，導致還沒有輸出答案的情況
+
+## GPT-OSS-20B (llama.cpp, MXFP4, ThinkLevel: medium) - 運行約 1 小時半
+
+|Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
+|-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
+|gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.4344|±  |0.0137|
+|     |       |strict-match    |     5|exact_match|↑  |0.3397|±  |0.0130|
+
+## GPT-OSS-20B (Ollama, , MXFP4, ThinkLevel: medium) - 運行約 1 小時
+
+|Tasks|Version|     Filter     |n-shot|  Metric   |   |Value |   |Stderr|
+|-----|------:|----------------|-----:|-----------|---|-----:|---|-----:|
+|gsm8k|      3|flexible-extract|     5|exact_match|↑  |0.3950|±  |0.0135|
+|     |       |strict-match    |     5|exact_match|↑  |0.1759|±  |0.0105|
