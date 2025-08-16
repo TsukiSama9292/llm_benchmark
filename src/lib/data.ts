@@ -119,6 +119,22 @@ export const modelData: ModelResult[] = [
     ]
   },
   {
+    name: "Gemma3n:E4B-IT-BF16 (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3n",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.711144806671721, stderr: 0.012484219800126671 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.6391205458680819, stderr: 0.013228626753925141 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.34305555555555556, stderr: 0.003308396763985619 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.32457142857142857, stderr: 0.007900501536176255 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.31310266591038005, stderr: 0.011011794095963508 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3344893164783533, stderr: 0.004949253583852297 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3756294058408862, stderr: 0.0061661873750182145 }
+    ]
+  },
+  {
     name: "GPT-OSS-20B-MXFP4 (llama.cpp)",
     description: "HF: bartowski/openai_gpt-oss-20b-GGUF-MXFP4-Experimental, ThinkLevel: medium - 運行約 1 小時半",
     category: "gpt-oss",
@@ -147,8 +163,13 @@ export const modelData: ModelResult[] = [
     hardware: "RTX4090",
     framework: "huggingface",
     scores: [
-      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.7195, stderr: 0.0124 },
-      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.7187, stderr: 0.0124 },
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.7376800606520091, stderr: 0.012116912419925704 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.6982562547384382, stderr: 0.012643544762873356 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.6487103174603175, stderr: 0.0032403073893666604 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.618, stderr: 0.0077206112668541365 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.6222348269994328, stderr: 0.011351445998177665 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.6275869784092181, stderr: 0.004954629551174923 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.706277274253105, stderr: 0.005753468936737745 }
     ]
   },
   {
