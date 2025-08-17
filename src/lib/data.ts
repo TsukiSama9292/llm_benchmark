@@ -68,11 +68,13 @@ export const modelData: ModelResult[] = [
     hardware: "RTX4090",
     framework: "huggingface",
     scores: [
-      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3911, stderr: 0.0034 },
-      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3863, stderr: 0.0081 },
-      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3205, stderr: 0.0110 },
-      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3767, stderr: 0.0051 },
-      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.4366, stderr: 0.0063 },
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.7445034116755117, stderr: 0.012013462405460067 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.5784685367702805, stderr: 0.013601824409483263 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.30540674603174606, stderr: 0.0032293422469302567 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.30228571428571427, stderr: 0.007764817617012654 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2665910380034033, stderr: 0.010543420822525719 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3060745049781855, stderr: 0.004855723662601807 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.31772406847935547, stderr: 0.005982160599560892 }
     ]
   },
   {
@@ -189,6 +191,22 @@ export const modelData: ModelResult[] = [
       { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.4047, stderr: 0.0063 },
     ]
   },
+  {
+    name: "google/gemma-3-1b-pt (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.02350265352539803, stderr: 0.004172883669643984 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.017437452615617893, stderr: 0.0036054868679982572 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2536706349206349, stderr: 0.003067223514675123 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.248, stderr: 0.0073066838168183695 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.24787294384571754, stderr: 0.010292872668744832 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.25383152477905807, stderr: 0.004606655490553888 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.25847599865726756, stderr: 0.0056783771037919985 }
+    ]
+  }
 ];
 
 // 工具函數
