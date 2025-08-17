@@ -221,7 +221,7 @@ export const modelData: ModelResult[] = [
       { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.47701085132565163, stderr: 0.005157888322343281 },
       { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.5773749580396106, stderr: 0.006321750911863945 }
     ]
-  }
+  },
   {
     name: "Gemma3-270M-BF16 (huggingface)",
     description: "HuggingFace 模型官方儲存庫",
@@ -269,7 +269,7 @@ export const modelData: ModelResult[] = [
       { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.340753999328784, stderr: 0.004961645818015982 },
       { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3818395434709634, stderr: 0.006212689081384814 }
     ]
-  }
+  },
   {
     name: "Gemma3n:E4B-IT-BF16 (huggingface)",
     description: "HuggingFace 模型官方儲存庫",
