@@ -21,8 +21,18 @@ export interface ModelResult {
   framework?: FrameworkType; // 添加框架字段
 }
 
-// 解析 README.md 中的模型數據
 export const modelData: ModelResult[] = [
+  {
+    name: "GPT-OSS-20B-MXFP4 (llama.cpp)",
+    description: "HF: bartowski/openai_gpt-oss-20b-GGUF-MXFP4-Experimental, ThinkLevel: medium - 運行約 1 小時半",
+    category: "gpt-oss",
+    hardware: "RTX4090",
+    framework: "llama.cpp",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.4344, stderr: 0.0137 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.3397, stderr: 0.0130 },
+    ]
+  },
   {
     name: "Gemma3-1B-IT-FP16 (ollama)",
     description: "ollama 官方儲存庫",
@@ -35,22 +45,6 @@ export const modelData: ModelResult[] = [
     ]
   },
   {
-    name: "Gemma3-1B-IT-BF16 (huggingface)",
-    description: "HuggingFace 模型官方儲存庫",
-    category: "gemma3",
-    hardware: "RTX4090",
-    framework: "huggingface",
-    scores: [
-      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.3153904473085671, stderr: 0.012799353675801836 },
-      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.2357846853677028, stderr: 0.0116925156506668 },
-      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.27232142857142855, stderr: 0.003129046095819468 },
-      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2702857142857143, stderr: 0.00749314569360198 },
-      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.25921724333522406, stderr: 0.010445922718571544 },
-      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.26893388522206063, stderr: 0.004680603921898167 },
-      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2824773413897281, stderr: 0.005818403123869934 }
-    ]
-  },
-  {
     name: "Gemma3-4B-IT-FP16 (ollama)",
     description: "ollama 官方儲存庫",
     category: "gemma3",
@@ -59,22 +53,6 @@ export const modelData: ModelResult[] = [
     scores: [
       { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.6126, stderr: 0.0134 },
       { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.4602, stderr: 0.0137 },
-    ]
-  },
-  {
-    name: "Gemma3-4B-IT-BF16 (huggingface)",
-    description: "HuggingFace 模型官方儲存庫",
-    category: "gemma3",
-    hardware: "RTX4090",
-    framework: "huggingface",
-    scores: [
-      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.7445034116755117, stderr: 0.012013462405460067 },
-      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.5784685367702805, stderr: 0.013601824409483263 },
-      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.30540674603174606, stderr: 0.0032293422469302567 },
-      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.30228571428571427, stderr: 0.007764817617012654 },
-      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2665910380034033, stderr: 0.010543420822525719 },
-      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3060745049781855, stderr: 0.004855723662601807 },
-      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.31772406847935547, stderr: 0.005982160599560892 }
     ]
   },
   {
@@ -119,33 +97,6 @@ export const modelData: ModelResult[] = [
     scores: [
       { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.7726, stderr: 0.0115 },
       { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.6763, stderr: 0.0129 },
-    ]
-  },
-  {
-    name: "Gemma3n:E4B-IT-BF16 (huggingface)",
-    description: "HuggingFace 模型官方儲存庫",
-    category: "gemma3n",
-    hardware: "RTX4090",
-    framework: "huggingface",
-    scores: [
-      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.711144806671721, stderr: 0.012484219800126671 },
-      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.6391205458680819, stderr: 0.013228626753925141 },
-      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.34305555555555556, stderr: 0.003308396763985619 },
-      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.32457142857142857, stderr: 0.007900501536176255 },
-      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.31310266591038005, stderr: 0.011011794095963508 },
-      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3344893164783533, stderr: 0.004949253583852297 },
-      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3756294058408862, stderr: 0.0061661873750182145 }
-    ]
-  },
-  {
-    name: "GPT-OSS-20B-MXFP4 (llama.cpp)",
-    description: "HF: bartowski/openai_gpt-oss-20b-GGUF-MXFP4-Experimental, ThinkLevel: medium - 運行約 1 小時半",
-    category: "gpt-oss",
-    hardware: "RTX4090",
-    framework: "llama.cpp",
-    scores: [
-      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.4344, stderr: 0.0137 },
-      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.3397, stderr: 0.0130 },
     ]
   },
   {
@@ -208,6 +159,22 @@ export const modelData: ModelResult[] = [
     ]
   },
   {
+    name: "Gemma3-1B-IT-BF16 (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.3153904473085671, stderr: 0.012799353675801836 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.2357846853677028, stderr: 0.0116925156506668 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.27232142857142855, stderr: 0.003129046095819468 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2702857142857143, stderr: 0.00749314569360198 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.25921724333522406, stderr: 0.010445922718571544 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.26893388522206063, stderr: 0.004680603921898167 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2824773413897281, stderr: 0.005818403123869934 }
+    ]
+  },
+  {
     name: "Gemma3-4B-PT-BF16 (huggingface)",
     description: "HuggingFace 模型官方儲存庫",
     category: "gemma3",
@@ -221,6 +188,54 @@ export const modelData: ModelResult[] = [
       { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.32671582529778787, stderr: 0.011026563399222476 },
       { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3660364694037364, stderr: 0.005051945632445054 },
       { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.405337361530715, stderr: 0.006276382491520932 }
+    ]
+  },
+  {
+    name: "Gemma3-4B-IT-BF16 (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.7445034116755117, stderr: 0.012013462405460067 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.5784685367702805, stderr: 0.013601824409483263 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.30540674603174606, stderr: 0.0032293422469302567 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.30228571428571427, stderr: 0.007764817617012654 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2665910380034033, stderr: 0.010543420822525719 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3060745049781855, stderr: 0.004855723662601807 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.31772406847935547, stderr: 0.005982160599560892 }
+    ]
+  },
+  {
+    name: "Gemma3-12B-IT-BF16 (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.8574677786201668, stderr: 0.009629588445673815 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.8233510235026535, stderr: 0.01050486250585457 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.5096726190476191, stderr: 0.003427063363036092 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.5334285714285715, stderr: 0.008166514597409105 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.39931934203062963, stderr: 0.011512192464280407 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.47701085132565163, stderr: 0.005157888322343281 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.5773749580396106, stderr: 0.006321750911863945 }
+    ]
+  }
+  {
+    name: "Gemma3-270M-BF16 (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.01819560272934041, stderr: 0.0036816118940738705 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.012130401819560273, stderr: 0.0030152942428909395 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2556051587301587, stderr: 0.00307431083242714 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2557142857142857, stderr: 0.007383170100357892 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2614861032331254, stderr: 0.010480863869935854 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2596487302830294, stderr: 0.004639504861875137 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.24773413897280966, stderr: 0.005597285695169396 }
     ]
   },
   {
@@ -240,22 +255,39 @@ export const modelData: ModelResult[] = [
     ]
   },
   {
-    name: "Gemma3-270M-BF16 (huggingface)",
+    name: "Gemma3n:E2B-IT-BF16 (huggingface)",
     description: "HuggingFace 模型官方儲存庫",
-    category: "gemma3",
+    category: "gemma3n",
     hardware: "RTX4090",
     framework: "huggingface",
     scores: [
-      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.01819560272934041, stderr: 0.0036816118940738705 },
-      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.012130401819560273, stderr: 0.0030152942428909395 },
-      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2556051587301587, stderr: 0.00307431083242714 },
-      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2557142857142857, stderr: 0.007383170100357892 },
-      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2614861032331254, stderr: 0.010480863869935854 },
-      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2596487302830294, stderr: 0.004639504861875137 },
-      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.24773413897280966, stderr: 0.005597285695169396 }
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.24109173616376042, stderr: 0.011782246325099714 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.2395754359363154, stderr: 0.01175686434407741 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.34910714285714284, stderr: 0.003321688044549879 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.33485714285714285, stderr: 0.007943342186850633 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3091321610890527, stderr: 0.010971541772016001 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.340753999328784, stderr: 0.004961645818015982 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3818395434709634, stderr: 0.006212689081384814 }
     ]
   }
+  {
+    name: "Gemma3n:E4B-IT-BF16 (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3n",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.711144806671721, stderr: 0.012484219800126671 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.6391205458680819, stderr: 0.013228626753925141 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.34305555555555556, stderr: 0.003308396763985619 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.32457142857142857, stderr: 0.007900501536176255 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.31310266591038005, stderr: 0.011011794095963508 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3344893164783533, stderr: 0.004949253583852297 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3756294058408862, stderr: 0.0061661873750182145 }
+    ]
+  },
 ];
+
 
 // 工具函數
 export const getCategoryColor = (category: string) => {
