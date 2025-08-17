@@ -173,7 +173,7 @@ ${scoresString}
  */
 function main() {
   const hfFilePaths = [
-    '/home/user/workspace/llm_benchmark/eval_data/hf/google__gemma-3-270m-it/results_2025-08-17T07-57-21.270866.json',
+    '/home/user/workspace/llm_benchmark/eval_data/hf/google__gemma-3-270m/results_2025-08-17T08-36-22.283186.json',
   ];
   
   const dataFilePath = '/home/user/workspace/llm_benchmark/src/lib/data.ts';

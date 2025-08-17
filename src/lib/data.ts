@@ -238,6 +238,22 @@ export const modelData: ModelResult[] = [
       { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.24924488197784986, stderr: 0.004580979422460125 },
       { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.25226586102719034, stderr: 0.0056341894020538255 }
     ]
+  },
+  {
+    name: "Gemma3-270M-BF16 (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.01819560272934041, stderr: 0.0036816118940738705 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.012130401819560273, stderr: 0.0030152942428909395 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2556051587301587, stderr: 0.00307431083242714 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2557142857142857, stderr: 0.007383170100357892 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2614861032331254, stderr: 0.010480863869935854 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.2596487302830294, stderr: 0.004639504861875137 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.24773413897280966, stderr: 0.005597285695169396 }
+    ]
   }
 ];
 
