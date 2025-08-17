@@ -210,7 +210,7 @@ export const modelData: ModelResult[] = [
     name: "Gemma3-12B-IT-BF16 (huggingface)",
     description: "HuggingFace 模型官方儲存庫",
     category: "gemma3",
-    hardware: "RTX4090",
+    hardware: "RTX5090",
     framework: "huggingface",
     scores: [
       { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.8574677786201668, stderr: 0.009629588445673815 },
