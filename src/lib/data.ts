@@ -192,7 +192,7 @@ export const modelData: ModelResult[] = [
     ]
   },
   {
-    name: "google/gemma-3-1b-pt (huggingface)",
+    name: "Gemma3-1B-PT-BF16 (huggingface)",
     description: "HuggingFace 模型官方儲存庫",
     category: "gemma3",
     hardware: "RTX4090",
@@ -205,6 +205,22 @@ export const modelData: ModelResult[] = [
       { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.24787294384571754, stderr: 0.010292872668744832 },
       { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.25383152477905807, stderr: 0.004606655490553888 },
       { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.25847599865726756, stderr: 0.0056783771037919985 }
+    ]
+  },
+  {
+    name: "Gemma3-4B-PT-BF16 (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.37452615617892343, stderr: 0.013331774158491384 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.37225170583775585, stderr: 0.013315375362565038 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3748015873015873, stderr: 0.003369815844399701 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.36942857142857144, stderr: 0.008079038279183059 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.32671582529778787, stderr: 0.011026563399222476 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.3660364694037364, stderr: 0.005051945632445054 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.405337361530715, stderr: 0.006276382491520932 }
     ]
   }
 ];
