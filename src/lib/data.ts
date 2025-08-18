@@ -207,6 +207,22 @@ export const modelData: ModelResult[] = [
     ]
   },
   {
+    name: "Gemma3-12B-PT-BF16 (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.66868840030326, stderr: 0.012964999679688666 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.6664139499620925, stderr: 0.012987282131410812 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.5263392857142857, stderr: 0.003426995492102798 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.5602857142857143, stderr: 0.008110951634378916 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.44639818491208166, stderr: 0.011622918182662131 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.4898758250363575, stderr: 0.005176661575741313 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.5847599865726754, stderr: 0.006293656738534028 }
+    ]
+  }
+  {
     name: "Gemma3-12B-IT-BF16 (huggingface)",
     description: "HuggingFace 模型官方儲存庫",
     category: "gemma3",
