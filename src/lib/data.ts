@@ -239,7 +239,7 @@ export const modelData: ModelResult[] = [
     ]
   },
   {
-    name: "Gemma3-12B-PT-BF16 (huggingface)",
+    name: "Gemma3-12B-PT-bnb-nf4 (huggingface)",
     description: "HuggingFace 模型官方儲存庫",
     category: "gemma3",
     hardware: "RTX4090",
