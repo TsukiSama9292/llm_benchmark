@@ -221,7 +221,7 @@ export const modelData: ModelResult[] = [
       { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.4898758250363575, stderr: 0.005176661575741313 },
       { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.5847599865726754, stderr: 0.006293656738534028 }
     ]
-  }
+  },
   {
     name: "Gemma3-12B-IT-BF16 (huggingface)",
     description: "HuggingFace 模型官方儲存庫",
