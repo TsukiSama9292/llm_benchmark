@@ -287,6 +287,22 @@ export const modelData: ModelResult[] = [
     ]
   },
   {
+    name: "Gemma3-27B-PT-bnb-nf4 (huggingface)",
+    description: "HuggingFace 模型官方儲存庫",
+    category: "gemma3",
+    hardware: "RTX4090",
+    framework: "huggingface",
+    scores: [
+      { task: "gsm8k", version: 3, filter: "flexible-extract", nShot: 5, metric: "exact_match", value: 0.7702805155420773, stderr: 0.011586857544997503 },
+      { task: "gsm8k", version: 3, filter: "strict-match", nShot: 5, metric: "exact_match", value: 0.7680060652009097, stderr: 0.01162687317509241 },
+      { task: "tmmluplus", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.5952876984126985, stderr: 0.0033601932761211694 },
+      { task: "tmmluplus_STEM", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.6377142857142857, stderr: 0.007858726895254601 },
+      { task: "tmmluplus_humanities", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.49120816789563243, stderr: 0.011712815609787616 },
+      { task: "tmmluplus_other", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.556885557668643, stderr: 0.005140888592858084 },
+      { task: "tmmluplus_social_sciences", version: 2, filter: "none", nShot: 0, metric: "acc", value: 0.6587781134608929, stderr: 0.0060378916823258825 }
+    ]
+  },
+  {
     name: "Gemma3-27B-IT-bnb-nf4 (huggingface)",
     description: "HuggingFace 模型官方儲存庫",
     category: "gemma3",
